@@ -1,4 +1,4 @@
-package prac1;
+package prac1_1;
 
 public class Task6 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package prac1;
+package prac1_1;
 import java.util.Scanner;
 
 public class Task7 {
