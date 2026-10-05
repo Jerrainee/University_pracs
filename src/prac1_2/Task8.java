@@ -7,7 +7,7 @@ public class Task8 {
     public static void main(String[] args) {
         String[] words = {"a", "b", "c", "d", "e", "f"};
 
-        System.out.println("До:    " + Arrays.toString(words));
+        System.out.println("До: " + Arrays.toString(words));
 
         for (int i = 0; i < words.length / 2; i++) {
             String temp = words[i];

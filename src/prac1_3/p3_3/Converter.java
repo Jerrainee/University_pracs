@@ -1,60 +1,66 @@
 package prac1_3.p3_3;
 
-
 public class Converter {
-    public static final String BASE_CURRENCY = "RUB";
-    private static final int USD = 0;
-    private static final int EUR = 1;
-    private static final int CNY = 2;
-    private static final int CURRENCY_COUNT = 3;
 
-    private double[] rates;
+    public String baseCur = "RUB";
+
+    public double[] curs = new double[3];
 
     public Converter() {
-        rates = new double[CURRENCY_COUNT];
-        rates[USD] = 95.50;
-        rates[EUR] = 103.20;
-        rates[CNY] = 13.10;
+        curs[0] = 95.0;
+        curs[1] = 100.0;
+        curs[2] = 13.2;
     }
 
-    private int codeToIndex(String currencyCode) {
-        switch (currencyCode.toUpperCase()) {
-            case "USD":
-                return USD;
-            case "EUR":
-                return EUR;
-            case "CNY":
-                return CNY;
-            default:
-                throw new IllegalArgumentException("Неизвестная валюта: " + currencyCode);
+    public int getCurrencyIndex(String currencyCode) {
+        String code = currencyCode.toUpperCase();
+        if (code.equals("USD")) {
+            return 0;
         }
+        if (code.equals("EUR")) {
+            return 1;
+        }
+        if (code.equals("CNY")) {
+            return 2;
+        }
+        return -1;
     }
 
     public void setRate(String currencyCode, double rateToRub) {
-        if (currencyCode.equalsIgnoreCase(BASE_CURRENCY)) {
+        if (currencyCode.equalsIgnoreCase(baseCur)) {
             System.out.println("Курс базовой валюты RUB менять нельзя.");
             return;
         }
-        int index = codeToIndex(currencyCode);
-        rates[index] = rateToRub;
+
+        int index = getCurrencyIndex(currencyCode);
+        if (index == -1) {
+            System.out.println("Неизвестная валюта: " + currencyCode);
+        } else {
+            curs[index] = rateToRub;
+        }
     }
 
     public double getRate(String currencyCode) {
-        if (currencyCode.equalsIgnoreCase(BASE_CURRENCY)) {
+        if (currencyCode.equalsIgnoreCase(baseCur)) {
             return 1.0;
         }
-        int index = codeToIndex(currencyCode);
-        return rates[index];
+
+        int index = getCurrencyIndex(currencyCode);
+        if (index == -1) {
+            System.out.println("Неизвестная валюта: " + currencyCode);
+            return 0.0;
+        }
+        return curs[index];
     }
 
     public boolean isSupported(String currencyCode) {
-        if (currencyCode.equalsIgnoreCase(BASE_CURRENCY)) {
+        if (currencyCode.equalsIgnoreCase(baseCur)) {
             return true;
         }
-        try {
-            codeToIndex(currencyCode);
+        int index = getCurrencyIndex(currencyCode);
+        if (index != -1) {
             return true;
-        } catch (IllegalArgumentException e) {
+        } else {
             return false;
         }
     }
@@ -62,8 +68,12 @@ public class Converter {
     public double convert(double amount, String fromCurrency, String toCurrency) {
         double fromRate = getRate(fromCurrency);
         double toRate = getRate(toCurrency);
-
+        if (fromRate == 0.0 || toRate == 0.0) {
+            return 0.0;
+        }
         double amountInRub = amount * fromRate;
-        return amountInRub / toRate;
+        double res = amountInRub / toRate;
+
+        return res;
     }
 }

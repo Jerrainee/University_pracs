@@ -25,6 +25,6 @@ public class CircleTest {
         c.setCenterX(0);
         c.setCenterY(0);
         System.out.println("\nПосле изменения c: " + c);
-        System.out.println("Сравнение a и c теперь: " + (a.equalsCircle(c) ? "одинаковые" : "разные"));
+        System.out.println("Сравнение a и c: " + (a.equalsCircle(c) ? "одинаковые" : "разные"));
     }
 }

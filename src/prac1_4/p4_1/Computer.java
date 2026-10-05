@@ -59,7 +59,7 @@ public class Computer {
     public String toString() {
         return brand + " " + model
                 + "\n  Процессор: " + processor
-                + "\n  Память:    " + memory
-                + "\n  Монитор:   " + monitor;
+                + "\n  Память: " + memory
+                + "\n  Монитор: " + monitor;
     }
 }

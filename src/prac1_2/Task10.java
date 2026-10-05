@@ -8,7 +8,14 @@ public class Task10 {
         System.out.println("Введите текст:");
         String line = scanner.nextLine().trim();
 
-        int count = line.isEmpty() ? 0 : line.split("\\s+").length;
+        int count;
+
+        if (line.isEmpty()) {
+            count = 0;
+        } else {
+            String[] words = line.split("\\s+");
+            count = words.length;
+        }
 
         System.out.println("Количество слов: " + count);
 

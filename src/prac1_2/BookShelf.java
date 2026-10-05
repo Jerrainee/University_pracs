@@ -1,14 +1,8 @@
 package prac1_2;
 
-/**
- * Класс "Книжная полка".
- * Реализует композицию: полка сама создаёт объекты Book внутри себя
- * (метод addBook) и владеет ими, книги не существуют отдельно от полки.
- * Поля: массив книг и количество книг на полке.
- */
 public class BookShelf {
     private Book[] books;
-    private int count; // сколько книг реально стоит на полке
+    private int count;
 
     public BookShelf(int capacity) {
         books = new Book[capacity];
@@ -37,7 +31,6 @@ public class BookShelf {
         return count;
     }
 
-    // Книга с самым ранним годом издания (null, если полка пуста)
     public Book getOldestBook() {
         if (count == 0) {
             return null;
@@ -51,7 +44,6 @@ public class BookShelf {
         return oldest;
     }
 
-    // Книга с самым поздним годом издания (null, если полка пуста)
     public Book getNewestBook() {
         if (count == 0) {
             return null;
@@ -65,7 +57,6 @@ public class BookShelf {
         return newest;
     }
 
-    // Расставить книги по возрастанию года выпуска (сортировка выбором)
     public void sortByYear() {
         for (int i = 0; i < count - 1; i++) {
             int minIndex = i;

@@ -13,7 +13,6 @@ public class Book {
         this.pages = pages;
     }
 
-    // Геттеры и сеттеры
     public String getAuthor() {
         return author;
     }

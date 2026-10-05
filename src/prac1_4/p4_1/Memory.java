@@ -1,20 +1,20 @@
 package prac1_4.p4_1;
 
 public class Memory {
-    private int capacityGb;
+    private int Gb;
     private String type;
 
-    public Memory(int capacityGb, String type) {
-        this.capacityGb = capacityGb;
+    public Memory(int Gb, String type) {
+        this.Gb = Gb;
         this.type = type;
     }
 
-    public int getCapacityGb() {
-        return capacityGb;
+    public int getGb() {
+        return Gb;
     }
 
-    public void setCapacityGb(int capacityGb) {
-        this.capacityGb = capacityGb;
+    public void setGb(int gb) {
+        this.Gb = gb;
     }
 
     public String getType() {
@@ -27,6 +27,6 @@ public class Memory {
 
     @Override
     public String toString() {
-        return capacityGb + " ГБ " + type;
+        return Gb + " ГБ " + type;
     }
 }

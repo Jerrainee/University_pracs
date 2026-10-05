@@ -3,12 +3,12 @@ package prac1_4.p4_1;
 public class Processor {
     private String model;
     private int cores;
-    private double clockSpeedGhz;
+    private double Ghz;
 
-    public Processor(String model, int cores, double clockSpeedGhz) {
+    public Processor(String model, int cores, double Ghz) {
         this.model = model;
         this.cores = cores;
-        this.clockSpeedGhz = clockSpeedGhz;
+        this.Ghz = Ghz;
     }
 
     public String getModel() {
@@ -27,16 +27,16 @@ public class Processor {
         this.cores = cores;
     }
 
-    public double getClockSpeedGhz() {
-        return clockSpeedGhz;
+    public double getGhz() {
+        return Ghz;
     }
 
-    public void setClockSpeedGhz(double clockSpeedGhz) {
-        this.clockSpeedGhz = clockSpeedGhz;
+    public void setGhz(double ghz) {
+        this.Ghz = ghz;
     }
 
     @Override
     public String toString() {
-        return model + " (" + cores + " ядер, " + clockSpeedGhz + " ГГц)";
+        return model + " (" + cores + " ядер, " + Ghz + " ГГц)";
     }
 }

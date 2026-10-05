@@ -1,4 +1,4 @@
-package prac1_4;
+package prac1_4.p4_1;
 
 /**
  * Тестирование перечисления Season.
@@ -15,20 +15,21 @@ public class SeasonTest {
         System.out.println("Описание: " + favoriteSeason.getDescription());
 
         // 2
-        printLoveMessage(Season.WINTER);
-        printLoveMessage(Season.SPRING);
-        printLoveMessage(Season.SUMMER);
-        printLoveMessage(Season.AUTUMN);
+        loveSeason(Season.WINTER);
+        loveSeason(Season.SPRING);
+        loveSeason(Season.SUMMER);
+        loveSeason(Season.AUTUMN);
 
         // 3
-        System.out.println("\n=== Все времена года ===");
+        System.out.println();
+        System.out.println("Все времена года");
         for (Season season : Season.values()) {
             System.out.printf("%-7s | средняя температура: %5.1f °C | %s%n",
                     season, season.getAverageTemperature(), season.getDescription());
         }
     }
 
-    public static void printLoveMessage(Season season) {
+    public static void loveSeason(Season season) {
         switch (season) {
             case WINTER:
                 System.out.println("Я люблю зиму");

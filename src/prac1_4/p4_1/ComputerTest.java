@@ -13,21 +13,21 @@ public class ComputerTest {
 
         Computer computer2 = new Computer(
                 ComputerBrand.APPLE,
-                "MacBook Pro 14",
-                new Processor("Apple M3 Pro", 11, 4.0),
-                new Memory(18, "LPDDR5"),
-                new Monitor(14.2, "3024x1964")
+                "MacBook Neo",
+                new Processor("Apple A18 Pro", 6, 4.0),
+                new Memory(8, "LPDDR5"),
+                new Monitor(13, "2408x1506")
         );
 
-        System.out.println("=== Компьютер 1 ===");
+        System.out.println("ноут 1");
         System.out.println(computer1);
 
-        System.out.println("\n=== Компьютер 2 ===");
+        System.out.println("ноут 2");
         System.out.println(computer2);
 
-        // изменение составной части через сеттер
+        System.out.println();
         computer1.setMemory(new Memory(32, "DDR4"));
-        System.out.println("\n=== Компьютер 1 после апгрейда памяти ===");
+        System.out.println("апгрейд памяти");
         System.out.println(computer1);
     }
 }
