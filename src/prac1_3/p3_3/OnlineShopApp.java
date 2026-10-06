@@ -8,46 +8,48 @@ public class OnlineShopApp {
         Converter converter = new Converter();
 
         Product[] catalog = {
-                new Product("Ноутбук", 85000),
-                new Product("Смартфон", 70000),
-                new Product("Наушники", 7500),
-                new Product("Клавиатура", 4990),
-                new Product("Мышь", 2199)
+                new Product("ноутбук", 85000),
+                new Product("смартфон", 70000),
+                new Product("наушники", 7500),
+                new Product("клавиатура", 4990),
+                new Product("мышь", 2199)
         };
 
-        System.out.println("Каталог товаров");
+        System.out.println("каталог товаров");
         for (int i = 0; i < catalog.length; i++) {
             System.out.println((i + 1) + ") " + catalog[i].getName() + " — " + catalog[i].getPriceRub() + " руб.");
         }
 
-        System.out.print("\nВыберите номер товара: ");
+        System.out.println();
+        System.out.print("выберите номер товара: ");
         int productIndex = scanner.nextInt() - 1;
 
         if (productIndex < 0 || productIndex >= catalog.length) {
-            System.out.println("Такого товара нет в каталоге.");
+            System.out.println("такого товара нет в каталоге.");
             return;
         }
         Product selected = catalog[productIndex];
 
-        System.out.print("Введите количество: ");
+        System.out.print("введите количество: ");
         int quantity = scanner.nextInt();
         double totalRub = selected.getPriceRub() * quantity;
 
         System.out.println();
-        System.out.println("Товар: " + selected.getName());
-        System.out.println("Количество: " + quantity);
-        System.out.println("Стоимость в рублях: " + totalRub + " руб.");
+        System.out.println("товар: " + selected.getName());
+        System.out.println("количество: " + quantity);
+        System.out.println("стоимость в рублях: " + totalRub + " руб.");
 
-        System.out.print("\nВ какой валюте хотите оплатить (RUB, USD, EUR, CNY)? ");
+        System.out.println();
+        System.out.print("в какой валюте хотите оплатить (RUB, USD, EUR, CNY)? ");
         scanner.nextLine();
         String currency = scanner.nextLine();
         if (!converter.isSupported(currency)) {
-            System.out.println("Такая валюта не поддерживается.");
+            System.out.println("такая валюта не поддерживается.");
             return;
         }
 
         double totalInChosenCurrency = converter.convert(totalRub, converter.baseCur, currency);
-        System.out.println("Итого к оплате: " + totalInChosenCurrency + " " + currency.toUpperCase());
+        System.out.println("итого к оплате: " + totalInChosenCurrency + " " + currency.toUpperCase());
 
         scanner.close();
     }

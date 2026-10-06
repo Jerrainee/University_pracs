@@ -51,6 +51,6 @@ public class Circle {
 
     @Override
     public String toString() {
-        return "Окружность: центр=(" + centerX + ", " + centerY + "), радиус=" + radius;
+        return "окружность: центр=(" + centerX + ", " + centerY + "), радиус=" + radius;
     }
 }

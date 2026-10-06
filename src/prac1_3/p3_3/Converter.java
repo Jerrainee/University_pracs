@@ -28,13 +28,13 @@ public class Converter {
 
     public void setRate(String currencyCode, double rateToRub) {
         if (currencyCode.equalsIgnoreCase(baseCur)) {
-            System.out.println("Курс базовой валюты RUB менять нельзя.");
+            System.out.println("курс базовой валюты RUB менять нельзя.");
             return;
         }
 
         int index = getCurrencyIndex(currencyCode);
         if (index == -1) {
-            System.out.println("Неизвестная валюта: " + currencyCode);
+            System.out.println("неизвестная валюта: " + currencyCode);
         } else {
             curs[index] = rateToRub;
         }
@@ -47,7 +47,7 @@ public class Converter {
 
         int index = getCurrencyIndex(currencyCode);
         if (index == -1) {
-            System.out.println("Неизвестная валюта: " + currencyCode);
+            System.out.println("неизвестная валюта: " + currencyCode);
             return 0.0;
         }
         return curs[index];

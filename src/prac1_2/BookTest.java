@@ -9,23 +9,20 @@ public class BookTest {
 
         book.setYear(1837);
         book.setPages(250);
-        System.out.println("После изменения: " + book);
-        System.out.println("Автор: " + book.getAuthor() + ", название: " + book.getTitle());
+        System.out.println("после изменения: " + book);
 
         // BookShelf
-
         BookShelf shelf = new BookShelf(10);
         shelf.addBook("Л. Н. Толстой", "Война и мир", 1869, 1225);
         shelf.addBook("Ф. М. Достоевский", "Преступление и наказание", 1866, 672);
         shelf.addBook("М. А. Булгаков", "Мастер и Маргарита", 1967, 480);
 
         shelf.printAll();
-
-        System.out.println("\nСамая ранняя книга: " + shelf.getOldestBook());
-        System.out.println("Самая поздняя книга: " + shelf.getNewestBook());
-
+        System.out.println();
+        System.out.println("самая ранняя книга: " + shelf.getOldestBook());
+        System.out.println("самая поздняя книга: " + shelf.getNewestBook());
         shelf.sortByYear();
-        System.out.println("\nПосле сортировки по возрастанию года:");
+        System.out.println("сортировка по возрастанию года:");
         shelf.printAll();
     }
 }

@@ -3,7 +3,7 @@ package prac1_4.p4_2;
 public class Ship extends Transport {
 
     public Ship() {
-        super("Корабль");
+        super("корабль");
     }
 
     @Override

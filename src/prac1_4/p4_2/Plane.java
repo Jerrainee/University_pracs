@@ -3,7 +3,7 @@ package prac1_4.p4_2;
 public class Plane extends Transport {
 
     public Plane() {
-        super("Самолёт");
+        super("самолёт");
     }
 
     @Override

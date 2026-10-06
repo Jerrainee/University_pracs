@@ -58,8 +58,8 @@ public class Computer {
     @Override
     public String toString() {
         return brand + " " + model
-                + "\n  Процессор: " + processor
-                + "\n  Память: " + memory
-                + "\n  Монитор: " + monitor;
+                + "\n  процессор: " + processor
+                + "\n  память: " + memory
+                + "\n  монитор: " + monitor;
     }
 }

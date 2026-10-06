@@ -5,23 +5,23 @@ public class Task7 {
 
     public static long factorial(int number) {
         if (number < 0) {
-            System.out.println("Факториал отрицательного числа");
+            System.out.println("факториал отрицательного числа!");
             return -1;
         }
-        long result = 1;
+        long res = 1;
         for (int i = 2; i <= number; i++) {
-            result *= i;
+            res *= i;
         }
-        return result;
+        return res;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите число: ");
+        System.out.print("введите число: ");
         int number = scanner.nextInt();
-        long result = factorial(number);
-        System.out.println(number + "! = " + result);
+        long res = factorial(number);
+        System.out.println(number + "! = " + res);
 
         scanner.close();
     }

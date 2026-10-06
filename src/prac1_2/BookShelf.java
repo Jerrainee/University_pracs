@@ -9,10 +9,9 @@ public class BookShelf {
         count = 0;
     }
 
-    // Полка сама создаёт книгу и ставит её на себя
     public boolean addBook(String author, String title, int year, int pages) {
         if (count >= books.length) {
-            System.out.println("Полка заполнена, книгу добавить нельзя.");
+            System.out.println("полка заполнена, книгу добавить нельзя.");
             return false;
         }
         books[count] = new Book(author, title, year, pages);

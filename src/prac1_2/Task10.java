@@ -5,7 +5,7 @@ public class Task10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите текст:");
+        System.out.println("введите текст:");
         String line = scanner.nextLine().trim();
 
         int count;
@@ -17,7 +17,7 @@ public class Task10 {
             count = words.length;
         }
 
-        System.out.println("Количество слов: " + count);
+        System.out.println("количество слов: " + count);
 
         scanner.close();
     }

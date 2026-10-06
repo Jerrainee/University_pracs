@@ -12,9 +12,9 @@ public class Task1_1 {
             arrayMath[i] = Math.random() * 100;
         }
 
-        System.out.println("Массив через match: " + Arrays.toString(formatArray(arrayMath)));
+        System.out.println("match: " + Arrays.toString(formatArray(arrayMath)));
         Arrays.sort(arrayMath);
-        System.out.println("Массив через match: сортировка: " + Arrays.toString(formatArray(arrayMath)));
+        System.out.println("match: сортировка: " + Arrays.toString(formatArray(arrayMath)));
 
         // Random
         Random random = new Random();
@@ -23,9 +23,9 @@ public class Task1_1 {
             arrayRandom[i] = random.nextDouble() * 100;
         }
 
-        System.out.println("Random: " + Arrays.toString(formatArray(arrayRandom)));
+        System.out.println("random: " + Arrays.toString(formatArray(arrayRandom)));
         Arrays.sort(arrayRandom);
-        System.out.println("Random, сортировка: " + Arrays.toString(formatArray(arrayRandom)));
+        System.out.println("random, сортировка: " + Arrays.toString(formatArray(arrayRandom)));
     }
 
     // для красоты

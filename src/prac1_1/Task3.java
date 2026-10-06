@@ -11,7 +11,7 @@ public class Task3 {
 
         double average = (double) sum / lst.length;
 
-        System.out.println("Сумма элементов: " + sum);
-        System.out.printf("Среднее арифметическое: %.2f%n", average);
+        System.out.println("сумма элементов: " + sum);
+        System.out.printf("среднее арифметическое: %.2f%n", average);
     }
 }

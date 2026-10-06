@@ -2,10 +2,6 @@ package prac1_4.p4_2;
 
 public class PersonTester {
 
-    static void check(String name, boolean condition) {
-        System.out.println((condition ? "[OK]     " : "[ОШИБКА] ") + name);
-    }
-
     public static void main(String[] args) {
 
         System.out.println("конструктор без параметров");

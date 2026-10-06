@@ -6,11 +6,11 @@ public class Task4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите количество элементов массива: ");
+        System.out.print("введите количество элементов массива: ");
         int n = scanner.nextInt();
         int[] lst = new int[n];
 
-        System.out.println("Введите " + n + " чисел:");
+        System.out.println("введите " + n + " чисел:");
         for (int i = 0; i < n; i++) {
             lst[i] = scanner.nextInt();
         }
@@ -42,10 +42,10 @@ public class Task4 {
             k++;
         }
 
-        System.out.println("Сумма doWhile: " + sumDoWhile);
-        System.out.println("Сумма while: " + sumWhile);
-        System.out.println("Максимальный элемент: " + n_max);
-        System.out.println("Минимальный элемент: " + n_min);
+        System.out.println("сумма doWhile: " + sumDoWhile);
+        System.out.println("сумма while: " + sumWhile);
+        System.out.println("максимальный элемент: " + n_max);
+        System.out.println("минимальный элемент: " + n_min);
 
         scanner.close();
     }

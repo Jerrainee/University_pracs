@@ -24,10 +24,10 @@ public class Task2_1 {
         System.out.println("float: " + dd.floatValue());
         System.out.println();
 
-        System.out.println("Double: " + dd);
+        System.out.println("double: " + dd);
         System.out.println();
 
         String d5 = Double.toString(3.14);
-        System.out.println("Answer: " + d5);
+        System.out.println(d5);
     }
 }

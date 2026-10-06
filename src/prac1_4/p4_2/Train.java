@@ -3,7 +3,7 @@ package prac1_4.p4_2;
 public class Train extends Transport {
 
     public Train() {
-        super("Поезд");
+        super("поезд");
     }
 
     @Override

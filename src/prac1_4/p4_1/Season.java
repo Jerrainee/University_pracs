@@ -1,27 +1,27 @@
 package prac1_4.p4_1;
 
 public enum Season {
-    WINTER(-10),
+    WINTER(-15),
     SPRING(10),
     SUMMER(25) {
         @Override
         public String getDescription() {
-            return "Теплое время года";
+            return "теплое время года";
         }
     },
     AUTUMN(5);
 
-    private int averageTemperature;
+    private double averageTemperature;
 
-    Season(int averageTemperature) {
+    Season(double averageTemperature) {
         this.averageTemperature = averageTemperature;
     }
 
-    public int getAverageTemperature() {
+    public double getAverageTemperature() {
         return averageTemperature;
     }
 
     public String getDescription() {
-        return "Холодное время года";
+        return "холодное время года";
     }
 }
