@@ -1,4 +1,4 @@
-package prac1_4.p4_1;
+package prac1_4.p4_3;
 
 public class SeasonTest {
 

@@ -1,4 +1,4 @@
-package prac1_6;
+package prac1_6.p6;
 
 public class NameableTester {
 

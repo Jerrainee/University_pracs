@@ -1,6 +1,5 @@
 package prac1_6.p6_11;
 
-// Перевод из Цельсия в Кельвины
 public class CelsiusToKelvin implements Convertable {
 
     @Override
