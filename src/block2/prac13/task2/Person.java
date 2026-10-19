@@ -1,4 +1,4 @@
-package block2.prac13;
+package block2.prac13.task2;
 public class Person {
 
     private String surname;

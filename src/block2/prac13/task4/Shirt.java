@@ -1,4 +1,4 @@
-package block2.prac13;
+package block2.prac13.task4;
 public class Shirt {
 
     private String id;

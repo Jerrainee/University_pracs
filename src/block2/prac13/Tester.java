@@ -1,4 +1,10 @@
 package block2.prac13;
+
+import block2.prac13.task1.Task1;
+import block2.prac13.task2.Person;
+import block2.prac13.task4.Shirt;
+import block2.prac13.task5.PhoneFormatter;
+
 // Тестовый класс для практической работы 13
 public class Tester {
 
@@ -6,7 +12,7 @@ public class Tester {
 
         // 1
         System.out.println("задание 1");
-        StringOperations.process("I like Java!!!");
+        Task1.process("I like Java!!!");
 
         // 2
         System.out.println();

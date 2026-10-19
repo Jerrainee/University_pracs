@@ -1,4 +1,4 @@
-package block2.prac13;
+package block2.prac13.task5;
 
 public class PhoneFormatter {
     public static String format(String phone) {
@@ -11,7 +11,7 @@ public class PhoneFormatter {
             code = phone.substring(1, phone.length() - 10);
             number = phone.substring(phone.length() - 10);
         } else {
-            return "Неверный формат номера: " + phone;
+            return "неверный формат номера: " + phone;
         }
 
         return "+" + code + number.substring(0, 3) + "-"

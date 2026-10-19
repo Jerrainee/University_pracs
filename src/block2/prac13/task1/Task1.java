@@ -1,6 +1,6 @@
-package block2.prac13;
+package block2.prac13.task1;
 
-public class StringOperations {
+public class Task1 {
     public static void process(String text) {
         System.out.println("1. исходная строка: " + text);
         System.out.println("2. последний символ: " + text.charAt(text.length() - 1));
