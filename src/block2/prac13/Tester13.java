@@ -2,11 +2,12 @@ package block2.prac13;
 
 import block2.prac13.task1.Task1;
 import block2.prac13.task2.Person;
+import block2.prac13.task3.Address;
 import block2.prac13.task4.Shirt;
 import block2.prac13.task5.PhoneFormatter;
+import block2.prac13.task6.Task6;
 
-// Тестовый класс для практической работы 13
-public class Tester {
+public class Tester13 {
 
     public static void main(String[] args) {
 
@@ -19,13 +20,38 @@ public class Tester {
         System.out.println("задание 2");
         Person p1 = new Person("aaa", "bbb", "ccc");
         System.out.println(p1.getShortName());
-        Person p2 = new Person("aaa", "bbb", null);
+
+        Person p2 = new Person("ab", "bc", null);
         System.out.println(p2.getShortName());
-        Person p3 = new Person("aaa", null, null);
+
+        Person p3 = new Person("a", null, null);
         System.out.println(p3.getShortName());
 
-        // 4
+        Person p4 = new Person("g", "", "f");
+        System.out.println(p4.getShortName());
+
+        //3
         System.out.println();
+        System.out.println("задание 3");
+
+        Address a1 = new Address();
+        a1.parseWithSplit("Россия, Москва, Москва, ул. Ленина, 42, 52, 67");
+        System.out.println(a1);
+
+        Address a2 = new Address();
+        a2.parseWithSplit("Россия, Москва, Москва, ул. Ленина, 42, , 67");
+        System.out.println(a2);
+
+        Address a3 = new Address();
+        a3.parseWithSplit("Россия,Москва  Москва, ул., Ленина, 42, 526,      7");
+        System.out.println(a3);
+
+        Address a4 = new Address();
+        a4.parseWithSplit("  Россия , Кpppppppppppppppppp , ty , tru , t , , r  ");
+        System.out.println(a4);
+
+
+        // 4
         System.out.println("задание 4");
         String[] shirts = new String[11];
         shirts[0] = "S001,Black Polo Shirt,Black,XL";
@@ -51,9 +77,10 @@ public class Tester {
 
         // 5
         System.out.println("задание 5");
-        System.out.println("+79175655655 -> " + PhoneFormatter.format("+79175655655"));
-        System.out.println("+104289652211 -> " + PhoneFormatter.format("+104289652211"));
-        System.out.println("89175655655 -> " + PhoneFormatter.format("89175655655"));
-        System.out.println("12345 -> " + PhoneFormatter.format("12345"));
+        System.out.println("+79175655655" + PhoneFormatter.format("+79175655655"));
+        System.out.println("+104289652211" + PhoneFormatter.format("+104289652211"));
+        System.out.println("89175655655" + PhoneFormatter.format("89175655655"));
+        System.out.println("12345" + PhoneFormatter.format("12345"));
+
     }
 }
